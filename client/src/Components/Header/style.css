@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  width: 84%;
+  margin: auto;
+}
+
+.header-wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  height: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  padding: 20px;
+  color: grey;
+  border-bottom: 1px solid lightgrey;
+}
+
+.header-left-container {
+  display: flex;
+  width: 76%;
+  justify-content: space-evenly;
+}
+
+.header-right-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 34%;
+}

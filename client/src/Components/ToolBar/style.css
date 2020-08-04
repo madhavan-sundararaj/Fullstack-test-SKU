@@ -1,0 +1,17 @@
+.toolbar-wrapper {
+  position: fixed;
+  padding-top: 64px;
+  width: 100%;
+  background: #fff;
+  color: grey;
+  z-index: 1;
+  border-bottom: 1px solid lightgrey;
+}
+
+.toolbar {
+  width: 78%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 28px;
+  margin: auto;
+}
