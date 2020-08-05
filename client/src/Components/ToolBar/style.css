@@ -1,0 +1,39 @@
+.toolbar-wrapper {
+  position: fixed;
+  padding-top: 64px;
+  width: 100%;
+  background: #fff;
+  color: grey;
+  z-index: 1;
+  border-bottom: 1px solid lightgrey;
+}
+
+.toolbar {
+  width: 78%;
+  justify-content: space-evenly;
+  height: 28px;
+  margin: auto;
+}
+
+.mobile-visible {
+  display: none;
+}
+
+.desktop-visible {
+  display: flex;
+}
+
+.header-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 480px) {
+  .mobile-visible {
+    display: flex;
+  }
+  .desktop-visible {
+    display: none;
+  }
+}

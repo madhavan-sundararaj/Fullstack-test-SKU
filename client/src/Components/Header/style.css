@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  width: 84%;
+  margin: auto;
+}
+
+.header-wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  height: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  padding: 20px;
+  color: grey;
+  border-bottom: 1px solid lightgrey;
+}
+
+.header-left-container {
+  width: 76%;
+  justify-content: space-evenly;
+}
+
+.header-right-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 34%;
+}
+
+.mobile-visible {
+  display: none;
+}
+
+.desktop-visible {
+  display: flex;
+}
+
+.header-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    width: 100%;
+  }
+  .header-left-container {
+    width: 50%;
+  }
+  .header-right-container {
+    width: 44%;
+  }
+  .mobile-visible {
+    display: flex;
+  }
+  .desktop-visible {
+    display: none;
+  }
+}
