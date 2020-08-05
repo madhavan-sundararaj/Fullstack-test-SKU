@@ -18,7 +18,6 @@
 }
 
 .header-left-container {
-  display: flex;
   width: 76%;
   justify-content: space-evenly;
 }
@@ -27,4 +26,36 @@
   display: flex;
   justify-content: space-evenly;
   width: 34%;
+}
+
+.mobile-visible {
+  display: none;
+}
+
+.desktop-visible {
+  display: flex;
+}
+
+.header-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    width: 100%;
+  }
+  .header-left-container {
+    width: 50%;
+  }
+  .header-right-container {
+    width: 44%;
+  }
+  .mobile-visible {
+    display: flex;
+  }
+  .desktop-visible {
+    display: none;
+  }
 }

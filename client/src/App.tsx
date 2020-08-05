@@ -1,18 +1,30 @@
 import axios from 'axios';
 import * as React from 'react';
+import { useDispatch } from 'react-redux';
 import './App.css';
 import Header from './Components/Header';
 import ProductCard from './Components/ProductCard';
 import ToolBar from './Components/ToolBar';
 
 export default function App() {
-  const [products, setProducts] = React.useState([]);
   const [searchTerm, setSearchTerm] = React.useState('');
+  const dispatch = useDispatch();
 
   React.useEffect(() => {
-    axios.get('/api/products/fetch').then((response) => {
-      setProducts(response.data.response);
-    });
+    axios
+      .get('/api/products/fetch')
+      .then((response) => {
+        dispatch({
+          type: 'SET_PRODUCTS',
+          payload: response.data.returnProduct,
+        });
+      })
+      .catch((error) => {
+        dispatch({
+          type: 'SET_ERROR',
+          payload: error.response.data.message,
+        });
+      });
   }, []);
 
   function searchProduct(event) {
@@ -39,24 +51,10 @@ export default function App() {
                 height="20px"
               />
             </div>
-            <div style={{ marginLeft: '15px' }}>Filter</div>
+            <div className="sub-filter">Filter</div>
           </div>
         </div>
-        {products ? (
-          products
-            .filter((data: any) => {
-              if (searchTerm === null) {
-                return data;
-              } else if (
-                data.title.toLowerCase().includes(searchTerm.toLowerCase())
-              ) {
-                return data;
-              }
-            })
-            .map((product: any, i) => <ProductCard product={product} key={i} />)
-        ) : (
-          <div> Loading </div>
-        )}
+        <ProductCard searchTerm={searchTerm} />
       </div>
     </main>
   );

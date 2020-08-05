@@ -1,7 +1,8 @@
 module.exports = (sequelize, Sequelize) => {
   const ProductImage = sequelize.define('product_image', {
-    image_id: {
+    id: {
       type: Sequelize.STRING,
+      primaryKey: true,
     },
     product_id: {
       type: Sequelize.STRING,

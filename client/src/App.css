@@ -35,12 +35,12 @@
   align-items: center;
 }
 
+.sub-filter {
+  margin-left: 15px;
+}
+
 @media screen and (max-width: 480px) {
-  .App-header {
-    height: 42px;
-    font-size: 25px;
-  }
-  .container {
-    padding-top: 82px;
+  .search-toolbar {
+    width: 85%;
   }
 }

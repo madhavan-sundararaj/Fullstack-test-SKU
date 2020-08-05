@@ -1,7 +1,8 @@
 module.exports = (sequelize, Sequelize) => {
   const ProductVariant = sequelize.define('product_variant', {
-    variant_id: {
+    id: {
       type: Sequelize.STRING,
+      primaryKey: true,
     },
     product_id: {
       type: Sequelize.STRING,

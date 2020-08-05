@@ -57,3 +57,30 @@
 .shipping {
   font-weight: 600;
 }
+
+.product-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 480px) {
+  .product-card {
+    grid-template-columns: auto;
+    grid-template-rows: 9% 22% 10% 40%;
+    grid-template-areas:
+      'title'
+      'image'
+      'stock'
+      'description';
+    height: 750px;
+  }
+  .product-image {
+    width: 115px;
+    height: 115px;
+  }
+  .image {
+    border-left: none;
+    border-bottom: 1px solid lightgrey;
+  }
+}
