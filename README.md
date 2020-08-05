@@ -4,8 +4,10 @@
 
 # Steps to Run on local machine
 
-- run npm install
+## Execute the following commands from your root folder terminal
+- npm install
 - npm run tsc
-- cd client and run npm install
+- cd client run npm install
+- npm run build
 - cd ..
 - npm start to start the server and go to http://localhost:8080/ on your browser
