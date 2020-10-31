@@ -8,6 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run tsc"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -18,6 +23,7 @@
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "husky": "^4.3.0",
     "node-ts": "^5.0.7",
     "nodemon": "^2.0.4",
     "pg": "^8.3.0",
